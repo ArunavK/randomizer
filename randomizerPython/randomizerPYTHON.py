@@ -3,6 +3,7 @@
     Uses the Mercenne Twister algorithm as the PRNG
 """
 import random
+import os
 
 # Taking user input
 N = int(input("No. of entries: "))
@@ -17,6 +18,7 @@ print("\nInput list:")
 print(lst)
 
 # Randomize the list
+random.seed(os.urandom(2))
 random.shuffle(lst)
 
 # Output the random list
